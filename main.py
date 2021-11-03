@@ -92,7 +92,7 @@ soup = BeautifulSoup(response.text, 'lxml')
 
 
 def send_test_mail():
-    sender_email = "keern1922@gmail.com"
+    sender_email = "kebbbba@gmail.com"
     receiver_email = "zhenia.k@auraegaming.com"
 
     msg = MIMEMultipart()
@@ -108,7 +108,7 @@ def send_test_mail():
         with smtplib.SMTP('smtp.gmail.com', 587) as smtpObj:
             smtpObj.ehlo()
             smtpObj.starttls()
-            smtpObj.login("keern1922@gmail.com", "Kernleon1")
+            smtpObj.login("Kebbbba@gmail.com", "Kernleon11п")
             smtpObj.sendmail(sender_email, receiver_email, msg.as_string())
     except Exception as e:
         print(e)
