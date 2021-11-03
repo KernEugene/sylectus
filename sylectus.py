@@ -153,14 +153,12 @@ def get_page_data(html):
     what_time_is_now = time.ctime()
 
 
-
-
 def avaible():
     onaload = 0
     counter = 1
     avaible = 0
 
-    for i in range(100):
+    for i in range(10):
         try:
             tr = soup.find('body').find('tr', id='tr_'f'{counter}')
             td = tr.find_all('td')
