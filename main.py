@@ -91,27 +91,27 @@ response = requests.post('https://www8.sylectus.com/I16_vehicleaddressbook.asp',
 soup = BeautifulSoup(response.text, 'lxml')
 
 
-# def send_test_mail():
-#     sender_email = "keern1922@gmail.com"
-#     receiver_email = "zhenia.k@auraegaming.com"
-#
-#     msg = MIMEMultipart()
-#     msg['Subject'] = '[Sylectus]'
-#     msg['From'] = sender_email
-#     msg['To'] = receiver_email
-#
-#     csv = MIMEApplication(open("cms.csv", 'rb').read())
-#     csv.add_header('Content-Disposition', 'attachment', filename="cms.csv")
-#     msg.attach(csv)
-#
-#     try:
-#         with smtplib.SMTP('smtp.gmail.com', 587) as smtpObj:
-#             smtpObj.ehlo()
-#             smtpObj.starttls()
-#             smtpObj.login("keern1922@gmail.com", "Kernleon1")
-#             smtpObj.sendmail(sender_email, receiver_email, msg.as_string())
-#     except Exception as e:
-#         print(e)
+def send_test_mail():
+    sender_email = "keern1922@gmail.com"
+    receiver_email = "zhenia.k@auraegaming.com"
+
+    msg = MIMEMultipart()
+    msg['Subject'] = '[Sylectus]'
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+
+    csv = MIMEApplication(open("cms.csv", 'rb').read())
+    csv.add_header('Content-Disposition', 'attachment', filename="cms.csv")
+    msg.attach(csv)
+
+    try:
+        with smtplib.SMTP('smtp.gmail.com', 587) as smtpObj:
+            smtpObj.ehlo()
+            smtpObj.starttls()
+            smtpObj.login("keern1922@gmail.com", "Kernleon1")
+            smtpObj.sendmail(sender_email, receiver_email, msg.as_string())
+    except Exception as e:
+        print(e)
 
 
 
@@ -221,7 +221,7 @@ def main():
 
 
 
-main()
+
 
 
 
