@@ -220,9 +220,7 @@ def main():
     print(datetime.datetime.now() - startTime)
 
 
-
-
-
+main()
 
 
 
