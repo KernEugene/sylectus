@@ -156,13 +156,11 @@ def get_page_data(html):
 
 
 def avaible():
-    outserv = 0
-    oos = 0
     onaload = 0
     counter = 1
     avaible = 0
 
-    for i in range(1000):
+    for i in range(100):
         try:
             tr = soup.find('body').find('tr', id='tr_'f'{counter}')
             td = tr.find_all('td')
@@ -203,12 +201,6 @@ def avaible():
 
     write_csv(data)
 
-    print(avaible)
-    print(oos)
-    print(onaload)
-
-
-
 
 
 def main():
@@ -216,7 +208,6 @@ def main():
     url = 'https://www8.sylectus.com/I16_vehicleaddressbook.asp'
     get_page_data(get_html(url))
     avaible()
-    send_test_mail()
     print(datetime.datetime.now() - startTime)
 
 
