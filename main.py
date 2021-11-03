@@ -100,9 +100,9 @@ def send_test_mail():
     msg['From'] = sender_email
     msg['To'] = receiver_email
 
-    csv = MIMEApplication(open("cms.csv", 'rb').read())
-    csv.add_header('Content-Disposition', 'attachment', filename="cms.csv")
-    msg.attach(csv)
+    # csv = MIMEApplication(open("cms.csv", 'rb').read())
+    # csv.add_header('Content-Disposition', 'attachment', filename="cms.csv")
+    # msg.attach(csv)
 
     try:
         with smtplib.SMTP('smtp.gmail.com', 587) as smtpObj:
