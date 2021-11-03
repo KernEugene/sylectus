@@ -108,7 +108,7 @@ def send_test_mail():
         with smtplib.SMTP('smtp.gmail.com', 587) as smtpObj:
             smtpObj.ehlo()
             smtpObj.starttls()
-            smtpObj.login("keern1922@gmail.coms", "Kernleon1")
+            smtpObj.login("keern1922@gmail.com", "Kernleon1")
             smtpObj.sendmail(sender_email, receiver_email, msg.as_string())
     except Exception as e:
         print(e)
