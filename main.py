@@ -162,7 +162,7 @@ def avaible():
     counter = 1
     avaible = 0
 
-    for i in range(10):
+    for i in range(1000):
         try:
             tr = soup.find('body').find('tr', id='tr_'f'{counter}')
             td = tr.find_all('td')
