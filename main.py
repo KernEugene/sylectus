@@ -216,7 +216,7 @@ def main():
     url = 'https://www8.sylectus.com/I16_vehicleaddressbook.asp'
     get_page_data(get_html(url))
     avaible()
-    # send_test_mail()
+    send_test_mail()
     print(datetime.datetime.now() - startTime)
 
 
